@@ -1,0 +1,9 @@
+// with options
+{
+  "plugins": [
+  ["react-html-attrs"]
+
+
+
+]
+}
