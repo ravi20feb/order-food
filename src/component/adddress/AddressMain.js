@@ -42,14 +42,14 @@ console.log(' i am rendering')
               <div className="input_content_wrapper_box2  w-auto      overflow-hidden">
                 <div className="logo_button_wraper  relative h-16  bg-transparent  flex justify-between  ">
                  
-                 <div className="logo absolute w-60  top-5 h-16  left-[-21px] ">
-                  <img src={png}  alt="logo" className=" w-52 h-[155px]  "/>
+                 <div className="logo absolute w-60  top-5 sm:top-8  h-16  left-[-21px] sm:left-[-18px] ">
+                  <img src={png}  alt="logo" className=" w-52 h-[155px] xs:w-40 xs:h-[130px]  "/>
                  </div>
                  
                   
                   <div className="log_signin_button absolute  w-auto mt-20 h-14  right-0  m-2 font-semibold  leading-10">
-                    <button className=" h-10 mb-4 w-24 border-0 hover:text-orange-500 ">Login</button>
-                    <button className="singnUp mb-4  h-10  w-24 border-0 bg-[#000] text-white">Signup</button>
+                    <button className=" h-10 mb-4 w-24 border-0 hover:text-orange-500 xm:w-20 xm:text-[14px]">Login</button>
+                    <button className="singnUp mb-4  h-10  w-24 border-0 bg-[#000] text-white xm:w-20 xm:text-[14px]">Signup</button>
                   </div>
                 </div>
                 <Demo ></Demo>
@@ -75,27 +75,27 @@ console.log(' i am rendering')
 
 
                         
-                        }}>clear<i class="fa fa-close"></i> </span>
+                        }}>clear<i className="fa fa-close"></i> </span>
                       </button>:
-                      <button   className="m-2 absolute  hover:bg-e9 font-medium text-sm w-[6rem] h-10 right-32 sm:right-28 flex justify-center items-center gap-2">
-                        <svg className="ml-1" width="16px" height="16px"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 3V7M12 17V21M3 12H7M17 12H21M12 12H12.01M19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12Z" stroke="#535665" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                        <span className="mr-1 text-[#535665]">  Locate me</span>
+                      <button   className="m-2 absolute  hover:bg-e9 font-medium text-sm w-[6rem] h-10 right-32 sm:right-[65px] flex justify-center items-center gap-2 sm:gap-0">
+                        <svg className="ml-1" width="16px" height="16px"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 3V7M12 17V21M3 12H7M17 12H21M12 12H12.01M19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12Z" stroke="#535665" strokeWidth="1" strokeLinecap="round" stroklinejoin="round"></path> </g></svg>
+                        <span className="mr-1 text-[#535665]  sm:mr-0">  Locate me</span>
                       </button>
                     }
                   </div>
-                  <a className="link h-full w-[8.75rem] border-1 bg-orange text-center pt-4 text-white font-bold "><span>Find Food</span></a>
+                  <a className="link h-full w-[8.75rem] border-1 bg-orange text-center pt-4 text-white font-bold sm:w-[6rem] test-[12px]  "><span>Find Food</span></a>
                   
                 </div>
 
                 {input.length>2 &&
 
                 
-                  <div className=" absolute z-[100] border-[.2px] border-light-gray xs:min-w-[300] xs:max-w-[44vh] ">
+                  <div className=" absolute z-[100] border-[.2px] border-light-gray xs:min-w-[300px] xs:max-w-[44vh] ">
                     {
                       diffAddress.length>0?diffAddress.map((data)=>( 
                        
                          
-                          <div className=" loco-effect-wrapper max-w-[36.75rem] min-w-[auto]    cursor-pointer  h-[3.75rem] flex items-center gap-5   bg-white overflow-hidden  text-[#535665] hover:text-orange " 
+                          <div className=" loco-effect-wrapper w-[36.75rem] xs:max-w-[100%] xs:text-[14px]    cursor-pointer  h-[3.75rem] flex items-center gap-5   bg-white overflow-hidden  text-[#535665] hover:text-orange " 
                             onClick={(e)=>{
 
                           // selector2.length>0?removeDispatch():console.log('restaurant item is empty')

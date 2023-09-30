@@ -21,8 +21,7 @@ import {restaurantData,removeData} from '../../utils/restaurantSlice';
 
 
 const  RestaurnatSliderNavbar =forwardRef((props,ref)=>{
-    // const selector = useSelector(store=>store.lat.coor)
-    // console.log(selector)
+
      const lat = JSON.parse(localStorage.getItem('lat'));
     const lng = JSON.parse(localStorage.getItem('lng'));
     const dispatch = useDispatch()

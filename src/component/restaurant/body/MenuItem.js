@@ -47,9 +47,9 @@ export default function MenuItem({prop}) {
                 <div>
                     <div className='menu-item-wrapper '>
                     {
-                    prop  &&   prop.map((item)=>{
+                    prop  &&   prop.map((item,index)=>{
                         return item?.card?.card?.itemCards && 
-                            <div className=' mb-4 '>
+                            <div className=' mb-4 ' key={index}>
                                 {/* {console.log(item)}  */}
                                 <div className='flex justify-between'>
                                     <div className='text-[18px] text-[#3e4154] font-extrabold'>{item?.card?.card?.title} ({item?.card?.card?.itemCards.length})</div>
@@ -63,8 +63,8 @@ export default function MenuItem({prop}) {
                                 
                                 {
 
-                                isExpand[item?.card?.card?.title]  ?  item?.card?.card?.itemCards.map((food)=>{
-                                        return <div className='mb-3 ml-2 ]'>
+                                isExpand[item?.card?.card?.title]  ?  item?.card?.card?.itemCards.map((food,index)=>{
+                                        return <div className='mb-3 ml-2 ]' key={index}>
                                             <div className='flex justify-between  my-5'>
                                               <div className='pl-2'>
                                                 <div className='flex item-center'>
@@ -115,7 +115,7 @@ export default function MenuItem({prop}) {
                                                         
                                                         handleRemoveDispatch(food)
                                                       }}>
-                                                        --
+                                                        -
                                                       </button>
                                                       
 

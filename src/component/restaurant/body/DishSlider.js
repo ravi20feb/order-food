@@ -156,26 +156,7 @@ export default function DishSlider(){
 
                 </div>
                 
-                {/* { */}
-                    
-                    {/* <div className="carousel-wrapper overflow-y-hidden overflow-x-scroll border-2 border-orange ">
-                        <div className="row flex  ml-4">
-                        
-                                {carouselCard.map((info)=>{
-                                    return( 
-                                        <div key={info.id}>
-                                       
-                                            <div className="caro-img w-[26.5rem] h-[15.75rem]">
-                                                <img  className="object-cover" src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/`+`${info.imageId}`} />
-                                            </div>
-                                        </div>
-                                    )
-                                })
-                                }
-                        </div>
-                    </div> */}
-                    
-                {/* } */}
+               
 
                         
        

@@ -190,21 +190,14 @@ export default function FilterBar(){
 
                              {/* filter pop start here  */}
                                 
-                                <FilterPop props={{isOpenFiter,getFacetList}} ref={childRef}/>
+                                <FilterPop props={{isOpenFiter,getFacetList,hello2}} ref={childRef}/>
                                 {/* filter pop end  here */}
                             </div>
-                            
-
-
 
                             {/* visible filter start here  */}
                             <div className="mt-4 sm:hidden">
                             
                                 <div className="filter-contain ">
-                                   
-                                    
-
-                                    
                                     <div>
                                         <div className="flex  justify-right mx-2 mt-4 ">
                                             <div onClick={()=>{
@@ -216,8 +209,8 @@ export default function FilterBar(){
 
                                             </div>
                                             {
-                                               isOpenFiter.length>0 ? isOpenFiter.map((info)=>(
-                                            <div >    
+                                               isOpenFiter.length>0 ? isOpenFiter.map((info,index)=>(
+                                            <div key={index}>    
                                                 <div  className="  mr-2 px-2 py-2 overflow-hidden   w-[max-content] rounded-[20px] border-[1px] md:text-[12px]   border-light-gray text-[16px] text-[rgba(2, 6, 12, 0.75)] font-extralight">
                                                 {info.label}
                                                

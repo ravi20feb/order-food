@@ -26,8 +26,11 @@ import { data } from "autoprefixer";
 
 
       async function getAddressApi(input){
+         // const url = `https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/misc/place-autocomplete?input=${input}&types=`
+         const url = 'https://corsproxy.io/?' + encodeURIComponent(`https://www.swiggy.com/dapi/misc/place-autocomplete?input=${input}&types=`);
       
-      const fetch1 = await fetch(`https://www.swiggy.com/dapi/misc/place-autocomplete?input=${input}&types=`);
+      // const fetch1 = await fetch(`https://www.swiggy.com/dapi/misc/place-autocomplete?input=${input}&types=`);
+      const fetch1 = await fetch(url);
 
       console.log(fetch1);
       const json =await  fetch1.json();
@@ -44,7 +47,7 @@ import { data } from "autoprefixer";
          if (input.length>=3 ) {
             console.log('hwllo address')
             console.log(input)
-            timer=  setTimeout(()=>getAddressApi(input),700)
+            timer=  setTimeout(()=>getAddressApi(input),200)
          }
             return ()=>clearTimeout(timer)
          },[input])

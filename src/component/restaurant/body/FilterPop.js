@@ -16,7 +16,7 @@ import {fetchData } from '../../utils/constant';
 
 
  const FilterPop = forwardRef(({props},ref)=> {
-  const {isOpenFiter,getFacetList} = props
+  const {isOpenFiter,getFacetList,hello2} = props
   const[isContent,setContent] = useState(null)
   const[isSelectionType,setSelectionType] = useState(null)
   const[facet1,setFacet] = useState('')
@@ -48,7 +48,7 @@ import {fetchData } from '../../utils/constant';
     //
    };
 
-
+  //  hello class defines in filterbar pop defines in 
     function hello(){
       let hello1 = document.getElementsByClassName('hello1')[0]
       let pop = document.getElementsByClassName('filter-pop')[0]
@@ -91,6 +91,7 @@ import {fetchData } from '../../utils/constant';
     
     //filter  post fetch start  
     async function fetchData(csrf1,facet1) {
+      
         const url = 'https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/update';
         const csrf = csrf1; // Replace with your CSRF token
         const facet = facet1; // Replace with your facet value
@@ -188,7 +189,7 @@ import {fetchData } from '../../utils/constant';
     console.log(props)
   return (
    <>
-      <div className="filter-pop   w-[45%]  focus:text-orange fixed z-20   mt-16  bg-white" onClick={handleFilterPopClick} ref={targetref}>
+      <div className="filter-pop   w-[45%]  focus:text-orange fixed z-[999]   mt-16  bg-white" onClick={handleFilterPopClick} ref={targetref}>
         <div className="pt-6 px-3 pb-3">
           <div className="font-extrabold leading-7 text-[rgba(2,6,12,.75)] bg-white" > Filter</div>
           <div className=" relative overflow-x-hidden overflow-y-scroll h-[50vh] ">
@@ -196,7 +197,7 @@ import {fetchData } from '../../utils/constant';
 
             {/*  filter list  start here */}
                 <ul className=" overflow-scroll  [&>li]:w-full [&>li]:relative [&>li]:flex [&>li]:pl-8 [&>li]:items-center  flex flex-col absolute h-full w-[30%] border-[1px] border-[rgb(240,240,245)]" >
-                  {getFacetList ? getFacetList.map((label)=>(
+                  {getFacetList ? getFacetList.map((label,index)=>(
 
                       
                         
@@ -205,7 +206,7 @@ import {fetchData } from '../../utils/constant';
                       setContent(label)
                       setSelectionType(label)
                       
-                      }}>
+                      }} key={index}>
                       <div className="">{label.label}</div>
                 
                     </li>
@@ -291,10 +292,11 @@ import {fetchData } from '../../utils/constant';
                 {/* filter by end */}
             </div>
           </div>
-            <div className="p-2 w-16 h-10 bg-orange right-0">
+            <div className="p-2 float-right w-16 h-10 bg-orange right-0">
                 <button onClick={(e)=>{
                     e.stopPropagation()
                     fetchData(csrf1,facet1,lat,lng)
+                    hello2(e)
 
                 }}>submit</button>
             </div>

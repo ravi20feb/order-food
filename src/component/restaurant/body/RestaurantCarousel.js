@@ -119,7 +119,7 @@ function RestaurnatCarousel(){
     
     return(
         <>
-       { carouselCard.length>0  ?<div className="body-margin lg:min-w-[auto] lg:max-w-[100vw] boder-2 border-[red]"> 
+       { carouselCard.length>0  ?<div className="body-margin lg:min-w-[auto] lg:max-w-[100vw] "> 
            <div className="">
                 <div className="relative mt-4   xs:min-w-[auto] xs:max-w-[100vw] ">
                     <div className="buttton-wrapper flex absolute mt-2 right-4  ">
@@ -133,7 +133,7 @@ function RestaurnatCarousel(){
                             </div>
                         </div>
                         {/* card carousel start */}
-                        <div className="carousel-wrapper overflow-x-scroll overflow-y-hidden carorsel-scroll  cursor-pointer border-2 border-orange">
+                        <div className="carousel-wrapper overflow-x-scroll overflow-y-hidden carorsel-scroll  cursor-pointer ">
                             
                             <div className="row flex  xs:ml-[.5rem] ">
                             

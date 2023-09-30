@@ -10,10 +10,7 @@ const filterIdSlice = createSlice({
     ADD_ID: (state, action) => {
         const payload = action.payload;
         let temp =[]
-    //   if (!state.id.includes(payload)) {
-    //     state.id.push(payload);
-    //   }
-        
+
 
       // Check if the newValue is not already in the id array
       let isDuplicate = false;
@@ -33,9 +30,6 @@ const filterIdSlice = createSlice({
         state.id = state.id.filter(id => id !== payload);
       }
 
-      // if (state.id.length>0 && isDuplicate) {
-      //   state.id.pop(payload);
-      // }
 
 
       if(state.id.length>0 && isDuplicate){

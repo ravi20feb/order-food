@@ -13,8 +13,7 @@ function useFilterBar(){
     selector[0] && console.log(selector)
     selector[0] ? localStorage.setItem('csrf_id',selector[0]?.csrfToken) : console.log('no csrf')
     console.warn('warning')
-    // getFacetList && console.log(getFacetList)
-    // sortConfig && console.log(sortConfig)
+
 
 
     function getTitle(){

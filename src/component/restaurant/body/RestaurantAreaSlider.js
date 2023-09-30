@@ -147,10 +147,10 @@ export default function RestaurantAreaSlider(){
                             
                             <div className="row flex   ">
                             
-                                    {restAreaCard.map((info)=>{
+                                    {restAreaCard.map((info,index)=>{
                                         return( 
-                                            <Link  to={'/home/restaurant'+'/'+info?.info?.id}>
-                                                <div key={info.info.id} className=" mr-4 leading-[1.75rem] relative cursor-pointer hover:scale-[.95] transition-all">
+                                            <Link  to={'/home/restaurant'+'/'+info?.info?.id} key={index}>
+                                                <div  className=" mr-4 leading-[1.75rem] relative cursor-pointer hover:scale-[.95] transition-all">
                                                 {/* {console.log(carouselCard)} */}
                                                 <div className="w-[17.5rem] full flex flex-col relative">
                                                     <div className="caro1-img w-full h-auto rounded-[1.4rem] overflow-hidden offer-text relative" >
@@ -167,8 +167,8 @@ export default function RestaurantAreaSlider(){
                                                                 <path d={starPath} fill="white"></path>
                                                                 <defs>
                                                                     <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19" gradientUnits="userSpaceOnUse">
-                                                                        <stop stop-color="#21973B"></stop>
-                                                                        <stop offset="1" stop-color="#128540"></stop>
+                                                                        <stop stopColor="#21973B"></stop>
+                                                                        <stop offset="1" stopColor="#128540"></stop>
                                                                     </linearGradient>
                                                                 </defs>
                                                                 </svg>
@@ -198,26 +198,7 @@ export default function RestaurantAreaSlider(){
 
                 </div>
                 
-                {/* { */}
-                    
-                    {/* <div className="carousel-wrapper overflow-y-hidden overflow-x-scroll border-2 border-orange ">
-                        <div className="row flex  ml-4">
-                        
-                                {carouselCard.map((info)=>{
-                                    return( 
-                                        <div key={info.id}>
-                                       
-                                            <div className="caro-img w-[26.5rem] h-[15.75rem]">
-                                                <img  className="object-cover" src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_850,h_504/`+`${info.imageId}`} />
-                                            </div>
-                                        </div>
-                                    )
-                                })
-                                }
-                        </div>
-                    </div> */}
-                    
-                {/* } */}
+              
 
                         
        

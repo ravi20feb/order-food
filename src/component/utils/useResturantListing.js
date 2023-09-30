@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export function UseRestaurantListing(ele,setDefaultRestData,setFilterFetch,defaultRestData,isFilterFetch) {
-  const [page, setPage] = useState(13);
+  const [page, setPage] = useState(8);
   const [loading, setLoading] = useState(false);
   const lat = localStorage.getItem('lat');
   const lng = localStorage.getItem('lng');
@@ -58,10 +58,7 @@ export function UseRestaurantListing(ele,setDefaultRestData,setFilterFetch,defau
     getRestaurantMore();
   }, [page]);
 
-//   const checkBottom = () => {
-//     const rect = element.getBoundingClientRect();
-//     return rect.height + rect.top + 1 > window.innerHeight;
-//   };
+
 
 
  function handleScroll() {
@@ -70,7 +67,7 @@ export function UseRestaurantListing(ele,setDefaultRestData,setFilterFetch,defau
       document.documentElement.scrollHeight
     ) {
       // When you reach the bottom, increment the page number to fetch more data.
-      setPage((prevPage) => prevPage + 13);
+      setPage((prevPage) => prevPage + 8);
     }
   }
 
@@ -84,29 +81,7 @@ export function UseRestaurantListing(ele,setDefaultRestData,setFilterFetch,defau
     };
   }, []);
 
-// const handleScroll = async () => {
-//     try {
-//       if (
-//         window.innerHeight + document.documentElement.scrollTop + 1 >=
-//         document.documentElement.scrollHeight
-//       ) {
-//         setPage((prev) => prev + 15);
-//       }
-//     } catch (error) { }
-//   };
 
-//   useEffect(() => {
-//     window.addEventListener("scroll", handleScroll);
-//     return () => {
-//       window.removeEventListener("scroll", handleScroll);
-//     };
-//   }, [loading]);
-
-//   useEffect(() => {
-//     if (page > 10) {
-//       getRestaurantMore();
-//     }
-//   }, [page]);
 
    // Adjust the return value as needed for your component.
    return loading

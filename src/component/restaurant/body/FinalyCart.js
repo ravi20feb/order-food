@@ -75,7 +75,7 @@ export default function FinalyCart() {
                                                     e.stopPropagation()
                                                     handleRemoveDispatch1(item)
                                                     }}>
-                                                    <span className='flex items-center justify-center'>--</span>
+                                                    <span className='flex items-center justify-center'>-</span>
                                                 </button>
                                             <div className='text-[#686b7b] ml-8 min-w-[5.75rem] '><span> </span>₹ {item.count*item.price/100}</div>
 

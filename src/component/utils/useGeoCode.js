@@ -29,7 +29,8 @@ import { useSelector } from "react-redux";
     console.log(address)
 
     !restaurant?console.log('i am empty'):console.log(restaurant) 
-    let url = `https://www.swiggy.com/dapi/misc/address-recommend?place_id=${placeId}`
+    // let url = `https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/misc/address-recommend?place_id=${placeId}`
+    const url = 'https://corsproxy.io/?' + encodeURIComponent(`https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/misc/address-recommend?place_id=${placeId}`);
 
      
         async function geoCode(){
@@ -66,21 +67,7 @@ import { useSelector } from "react-redux";
             else(console.log('happy coding 😂'))
 
         }
-        // async function fetchRestaurant(){
-
-        //     if (lat && lng) {
-        //         let fetchRest = await fetch(`https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}&page_type=DESKTOP_WEB_LISTING`)
-        //     let jsonRest = await fetchRest.json()
-        //     console.log(jsonRest)
-            
-        //     setRestaurant(jsonRest?.data)
-        //     dispatch(restaurantData({jsonRest}))
-            
-            
-        //     }   
-        //     else(console.log('🌋'))
-
-        // }
+        
       
     useEffect(()=>{
 
@@ -89,20 +76,7 @@ import { useSelector } from "react-redux";
     },[placeId]
 
    )
-//     useEffect(()=>{
-
-//         console.log('i am first exact address lt lng')
-//          geoCode(placeId) 
-//     },[]
-
-//    )
-
-//    useEffect(()=>{
-//      fetchRestaurant(lat,lng)
-    
-//         console.log(' i am geocode useEffect')
-//         console.log(address)
-//    },[lat,lng])
+//    
     return [setPlaceId,setAddress,setLat,setLng ]
 
 

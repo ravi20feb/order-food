@@ -1,9 +1,6 @@
 // with options
 {
   "plugins": [
-  ["react-html-attrs"]
-
-
-
-]
+    ["transform-remove-console", { "exclude": ["error"] }]
+  ]
 }

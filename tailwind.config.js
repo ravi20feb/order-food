@@ -46,6 +46,7 @@ module.exports = {
       md: {max:"1060px"},
       lg: {max:"1200px"},
       xl: {max:"1700px"},
+      minsm: {min:"768px"}
     },
       
     },

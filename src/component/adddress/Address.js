@@ -36,10 +36,7 @@ function Address(){
 
 
  
-// when tab is closed, again visit to sd
-//   if(select.length==2) {
-//   return <Navigate to={'home'} />
-// }
+
 
     return(
       <>  

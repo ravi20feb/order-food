@@ -1,20 +1,14 @@
 import React, { useState,useEffect } from 'react';
 import { useRef } from 'react';
-// import navSvg from '../../../assests/swiggyNav.svg'
-// import  MySvg  from "../../../assests/swiggyNav.svg";
+
 import { path } from '../../utils/constant';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown,faXmark,faCrosshairs,faUser ,faLifeRing,faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
-// import { accessLocation,successLocation } from '../../utils/constant';
-// import useData from '../../utils/useData';
+
 import { faLocationDot,faBagShopping } from '@fortawesome/free-solid-svg-icons';
-// import useAddressMain from '../../utils/useAddressMain';
-// import useGeoCode from '../../utils/useGeoCode';
+
 import { path2 } from '../../utils/constant';
-// import { useDispatch } from 'react-redux';
-// import { addLat } from '../../utils/latslice';
-// import { removeLngLat } from '../../utils/latslice';
-// import {restaurantData,removeData} from '../../utils/restaurantSlice';
+
 import { useSelector } from 'react-redux';
 import RestaurnatSliderNavbar from './RestaurantSliderNav';
 import { useParams } from 'react-router-dom';
@@ -83,12 +77,12 @@ useEffect(()=>{
                 {/*navBar Logo Start here */}
                 <a href='/' className='block h-[49px] mr-4' >
                     <svg className="_8pSp-" viewBox="0 0 559 825" height="49" width="34" fill="#fc8019">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d={path} fill="url(#paint0_linear_19447_66107)"></path>
+                        <path fillRule="evenodd" clipRule="evenodd" d={path} fill="url(#paint0_linear_19447_66107)"></path>
                         <defs>
                             <linearGradient id="paint0_linear_19447_66107" x1="445.629" y1="63.8626" x2="160.773" y2="537.598" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FF993A">
+                                <stop stopColor="#FF993A">
                                 </stop>
-                                <stop offset="1" stop-color="#F15700">
+                                <stop offset="1" stopColor="#F15700">
                                 </stop>
                             </linearGradient>
                         </defs>
@@ -117,7 +111,7 @@ useEffect(()=>{
                         <div className='relative   '>
                             <Link to={'/home/cart'}>
                                 <div className='relative flex items-center h-[5rem] pl-[1.75rem]  text-[#686b78]'>
-                                <a className='flex items-center '>
+                                <span className='flex items-center '>
                                     <span className='absolute text-[1.5rem]'>
                                         <FontAwesomeIcon icon={faBagShopping} className='inline text-[#686b78] '/>
                                         {selector?.quatity >0 && <div className='absolute top-[-3px] left-3  w-[14px] h-[14px]  bg-orange rounded-full text-center  text-[white] text-[12px] '>{selector?.quatity}</div>}
@@ -126,7 +120,7 @@ useEffect(()=>{
                                     </span>
                                         <span className='text-[14px] pl-8' >Cart</span>
                                     
-                                    </a>
+                                    </span>
                                 </div>
                             </Link>
                         </div>

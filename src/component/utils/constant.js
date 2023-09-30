@@ -36,13 +36,6 @@ export const nonSelectedPath = "M8 14.5C11.5899 14.5 14.5 11.5899 14.5 8C14.5 4.
 export const selectedPath1 = "M14.5 8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0zM16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8 4.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9z"
 export const selectedPath2 = "M8 11.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm0 1a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9z"
 
-{/* <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" strokeColor="rgba(2, 6, 12, 0.92)" fillColor="rgba(2, 6, 12, 0.92)">
-<path fill="rgba(2, 6, 12, 0.92)" fill-rule="evenodd" clip-rule="evenodd" d={nonSelectedPath} fill-opacity="0.6"></path></svg> */}
-
-{/* <svg width="16" height="16" fill="none" aria-hidden="true" strokeColor="rgba(2, 6, 12, 0.92)" fillColor="#F15700">
-<path fill="#F15700" fill-rule="evenodd" clip-rule="evenodd" d={selectedPath1}></path>
-<path fill-rule="evenodd" clip-rule="evenodd" d=selectedPath2></path>
-</svg> */}
 
 
 
@@ -60,66 +53,66 @@ seoUrl:"https://www.swiggy.com/",
 
 // filter post fetch start here
 
-export  async function fetchData(csrf1,facet1,lat,lng) {
-        const url = 'https://www.swiggy.com/dapi/restaurants/list/update';
-        const csrf = csrf1; // Replace with your CSRF token
-        const facet = facet1; // Replace with your facet value
-        console.log(csrf)
+// export  async function fetchData(csrf1,facet1,lat,lng) {
+//         const url = 'https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/update';
+//         const csrf = csrf1; // Replace with your CSRF token
+//         const facet = facet1; // Replace with your facet value
+//         console.log(csrf)
 
-        let headers = new Headers();
+//         let headers = new Headers();
 
-        headers.append('Content-Type', 'application/json');
-        headers.append('Accept', 'application/json');
-        // headers.append('Authorization', 'Basic ' + base64.encode(username + ":" +  password));
-        headers.append('Origin','http://localhost:3000');
+//         headers.append('Content-Type', 'application/json');
+//         headers.append('Accept', 'application/json');
+//         // headers.append('Authorization', 'Basic ' + base64.encode(username + ":" +  password));
+//         headers.append('Origin','http://localhost:3000');
 
-        const body1 = {
-            lat: lat,
-            lng: lng,
-            page_type: 'DESKTOP_WEB LISTING',
-            seo_Params: {
-            apiName: "FoodHomePage",
-            pageType: "FOOD_HOMEPAGE",
-            seoUrl: "https://www.swiggy.com/"
-            },
-            _csrf: csrf,
-            filters: {
-            isFiltered: true,
-            facets: facet
-            }
+//         const body1 = {
+//             lat: lat,
+//             lng: lng,
+//             page_type: 'DESKTOP_WEB LISTING',
+//             seo_Params: {
+//             apiName: "FoodHomePage",
+//             pageType: "FOOD_HOMEPAGE",
+//             seoUrl: "https://www.swiggy.com/"
+//             },
+//             _csrf: csrf,
+//             filters: {
+//             isFiltered: true,
+//             facets: facet
+//             }
            
-        };
+//         };
 
         
-        let requestBody = JSON.stringify(body1);
+//         let requestBody = JSON.stringify(body1);
 
          
-        const options = {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json',
+//         const options = {
+//             method: 'POST',
+//             headers: {
+//             'Content-Type': 'application/json',
 
-            },
-            body: requestBody,
+//             },
+//             body: requestBody,
             
-        };
+//         };
 
-        try {
-            const response = await fetch(url, options);
+//         try {
+//             const response = await fetch(url, options);
 
-            if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-            }
+//             if (!response.ok) {
+//             throw new Error(`HTTP error! Status: ${response.status}`);
+//             }
 
-            const data = await response.json();
+//             const data = await response.json();
         
-            // Handle the response data here
-            console.log(data);
-        } 
-        catch (error) {
-            console.error('Fetch error:', error);
-        }
-    }
+//             // Handle the response data here
+//             console.log(data);
+//         } 
+//         catch (error) {
+//             console.error('Fetch error:', error);
+//         }
+//     }
     // filter  post fetch end  here
 
 
